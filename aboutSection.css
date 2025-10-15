@@ -1,0 +1,284 @@
+@font-face {
+	font-family: "monument";
+	src: url("./fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+	font-family: "poppins";
+	src: url("./fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: "rubik-mono";
+	src: url("RubikMono-Regular.ttf");
+}
+
+html {
+	font-family: "monument";
+	--nav-unchecked-color: #283618;
+	--nav-checked-color: #31beaa;
+	--nav-logo-color: #364e34;
+	--nav-bar-color: #f0f4f8;
+	--helios-text-color: #f0f4f7;
+	--background-meet-helios: #fefae0;
+	background-color: white;
+}
+
+a {
+	text-align: center;
+}
+
+.navigation-bar {
+	top: 0;
+	margin: -8px;
+	background-color: var(--nav-bar-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 45px;
+	opacity: 80%;
+	text-align: center;
+	position: sticky;
+	align-items: center;
+	z-index: 1;
+}
+
+.cont1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.cont2 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.cont2-logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 75px;
+	min-height: 45px;
+}
+.iotree-logo {
+	width: 80px;
+	height: 48px;
+}
+
+.cont3 {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.cont4 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.cont5-login-icon {
+	display: flex;
+	padding-right: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 25px;
+	text-decoration: none;
+	color: var(--nav-logo-color);
+}
+
+.nav-cont {
+	font-size: 20px;
+	text-decoration: none;
+	color: var(--nav-unchecked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont:hover {
+	color: var(--nav-checked-color);
+	transform: scale(1.07) translateY(-0.5px);
+}
+
+.nav-cont-h {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--nav-checked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont-h:hover {
+	color: var(--nav-unchecked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.login-icon {
+	width: 50px;
+	height: 50px;
+	filter: invert(0%) sepia(45%) saturate(548%) hue-rotate(127deg)
+		brightness(95%) contrast(90%);
+	transition:
+		transform 0.3s ease-out,
+		filter 0.3s ease-out;
+}
+
+.login-icon:hover {
+	transform: scale(1.05);
+	filter: invert(0%) sepia(40%) saturate(548%) hue-rotate(127deg)
+		brightness(110%) contrast(100%);
+}
+
+#mainAboutSection {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
+	height: 100vh;
+	position: relative;
+}
+
+.heliosSide {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	position: sticky;
+	top: 110px;
+	z-index: -1;
+	opacity: 85%;
+}
+
+.heliosIcon {
+	object-fit: cover;
+	width: 70px;
+	height: 70px;
+}
+
+.needHelpText {
+	font-family: "poppins";
+	color: var(--nav-checked-color);
+	font-size: 22px;
+}
+
+.subAboutCont {
+	display: flex;
+	height: 900px;
+	width: 85%;
+	margin-top: 100px;
+	flex-wrap: wrap;
+}
+
+.aboutHeaderCont {
+	display: flex;
+	justify-content: center;
+	height: 80px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.weAre {
+	margin-left: 100px;
+	font-family: "poppins";
+	color: var(--nav-checked-color);
+	font-size: 58px;
+}
+
+.weAre::after {
+	content: " IoTREE";
+	font-family: "monument";
+	color: var(--nav-unchecked-color);
+	font-size: 54px;
+}
+
+.headerLogo {
+	height: 105px;
+	width: 190px;
+}
+
+.meetHeliosSection {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--background-meet-helios);
+	width: 1050px;
+	height: 450px;
+	border-radius: 25px;
+}
+
+.meethHeliosSectionLeft {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 75%;
+}
+
+.meetHeliosHeader {
+	font-size: 64px;
+	font-weight: 800;
+	margin-left: 40px;
+	color: var(--nav-checked-color);
+	height: 60px;
+}
+
+.meetHeliosParagr {
+	margin-left: 20px;
+	width: 68%;
+	font-family: "poppins";
+	font-size: 26.5px;
+	font-style: italic;
+}
+
+.meetHeliosButtons {
+	margin-left: 30px;
+	gap: 50px;
+	display: flex;
+	width: 90%;
+}
+
+.viewFeaturesButton,
+.tryHeliosButton {
+	font-family: "poppins";
+	font-size: 16px;
+	width: 150px;
+	height: 42px;
+	border-radius: 30px;
+	border: none;
+}
+
+.viewFeaturesButton {
+	font-weight: 400;
+}
+
+.tryHeliosButton {
+	font-weight: 950;
+}
+
+.meethHeliosSectionRight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 23%;
+	height: 100%;
+}
+
+.meetHeliosPhone {
+	object-fit: cover;
+	height: 425px;
+	width: 180px;
+}
