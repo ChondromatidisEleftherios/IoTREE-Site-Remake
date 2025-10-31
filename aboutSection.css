@@ -240,17 +240,20 @@ a {
 .meetHeliosHeader {
 	display: flex;
 	justify-content: center;
-	font-size: 72px;
+	font-size: 90px;
 	font-weight: 800;
 	margin-left: 40px;
+	margin-top: 35px;
 	color: var(--nav-checked-color);
 	height: 60px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .meetHeliosHeader::before {
 	content: "Meet\00a0";
 	color: #283619;
-	font-size: 72px;
+	font-size: 90px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .meetHeliosTextContainer{
@@ -264,6 +267,7 @@ height: 50px;
 	display: flex;
 	justify-content: center;
 	margin-left: 20px;
+	margin-top: 40px;
 	width: 100%;
 	font-family: "poppins";
 	font-size: 42px;
@@ -273,6 +277,7 @@ height: 50px;
 
 .meetHeliosButtons {
 	margin-left: 80px;
+	margin-top: 60px;
 	gap: 70px;
 	display: flex;
 	width: 90%;
@@ -280,21 +285,53 @@ height: 50px;
 
 .viewFeaturesButton,
 .tryHeliosButton {
-	font-family: "poppins";
-	font-size: 20px;
-	width: 200px;
-	height: 46px;
-	border-radius: 30px;
-	border: none;
-	margin-top: 80px;
+  padding: 1.25rem 4rem; /* px-16 py-5 */
+  background: #ebe9e6;
+  color: black;
+  border: none;
+  border-radius: 9999px; /* fully rounded */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow:
+  -9px -9px 20px rgba(255, 255, 255, 0.6),
+   9px  9px 20px rgba(0, 0, 0, 0.15);
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease,
+  background-color 0.3s ease;
+}
+.tryHeliosButton:hover {
+	background: #f0eeeb;
+	transform: translateY(-3px);
+	box-shadow:
+	10px 10px 25px rgba(0, 0, 0, 0.16),
+	-6px -6px 20px rgba(255, 255, 255, 0.7);
 }
 
+/* Active state (pressed) */
+.tryHeliosButton:active {
+	transform: translateY(0px);
+	box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.12);
+}
 .viewFeaturesButton {
 	font-weight: 400;
 }
-
+.tryHeliosButton {
+	font-weight: 800;
+	letter-spacing: 0.03em;
+  }
+.viewFeaturesButton:active {
+	transform: translateY(0px);
+	box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.12);
+}
 .viewFeaturesButton:hover {
 	cursor: pointer;
+	background: #f0eeeb;
+	transform: translateY(-3px);
+	box-shadow: 6px 12px 28px rgba(0, 0, 0, 0.16);
+
 }
 
 .tryHeliosButton {
