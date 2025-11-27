@@ -236,7 +236,7 @@ a {
 	border-radius: 25px;
 }
 
-.meethHeliosSectionLeft {
+.meetHeliosSectionLeft {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -308,7 +308,7 @@ height: clamp(20px,3.2vw,50px);
   background-color 0.3s ease;
 }
 
-.tryHeliosButton:hover {
+.tryHeliosButton .viewFeaturesButton:hover {
 	background: #f0eeeb;
 	transform: translateY(-3px);
 	box-shadow:
@@ -338,23 +338,7 @@ height: clamp(20px,3.2vw,50px);
 	box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.viewFeaturesButton:hover {
-	cursor: pointer;
-	background: #f0eeeb;
-	transform: translateY(-3px);
-	box-shadow: 6px 12px 28px rgba(0, 0, 0, 0.16);
-
-}
-
-.tryHeliosButton {
-	font-weight: 950;
-}
-
-.tryHeliosButton:hover {
-	cursor: pointer;
-}
-
-.meethHeliosSectionRight {
+.meetHeliosSectionRight {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -379,7 +363,6 @@ height: clamp(20px,3.2vw,50px);
 }
 
 .viewPlans{
-background: radial-gradient(farthest-corner, #123A27, #2A907E, #A8EAA9);
 height: clamp(125px,16vw,270px);
 display: flex;
 flex-direction: column;
@@ -387,6 +370,15 @@ align-items: center;
 justify-content: center;
 flex-wrap: nowrap;
 border-radius: 10px;
+background: radial-gradient(
+        circle at center,
+        #0f3d2e 0%,
+        #2a907e 45%,
+        #a8eaa9 100%
+    );
+	box-shadow:
+	0px 10px 25px rgba(0, 0, 0, 0.25),
+	inset 0px 0px 18px rgba(255, 255, 255, 0.25);
 }
 
 .plansHeader{
@@ -406,13 +398,28 @@ border-radius: 10px;
 }
 
 
-.meetTheTeam{
-display: flex;
-justify-content: center;
-align-items: center;
-background: radial-gradient(farthest-corner, #123A27, #2A907E, #A8EAA9);
-height: 150px;
-border-radius: 10px;
+.meetTheTeam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 3px;
+    border-radius: 15px;
+    
+    /* Smooth teal–mint gradient like the screenshot */
+    background: radial-gradient(
+        circle at center,
+        #0f3d2e 0%,
+        #2a907e 45%,
+        #a8eaa9 100%
+    );
+
+    /* Soft glow edges */
+    box-shadow:
+        0px 10px 25px rgba(0, 0, 0, 0.25),
+        inset 0px 0px 18px rgba(255, 255, 255, 0.25);
+
+    width: 95%;
+    text-align: center;
 }
 
 .commonTextTeam{
@@ -420,9 +427,37 @@ border-radius: 10px;
 	color: #FEFAE0;
 	font-size: clamp(12px,1.6vw,26px);
 	text-align: center;
-	letter-spacing: 0.2px;
+	letter-spacing: 1px;
+	
+}
+html {
+    scroll-behavior: smooth;
+}
+.click-card {
+	display: block;
+    width: 100%;
+    text-decoration: none;
+}
+.viewPlans:hover,
+.meetTheTeam:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0px 14px 30px rgba(0, 0, 0, 0.35),
+        inset 0px 0px 22px rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.viewPlans,
+.meetTheTeam {
+    transition: all 0.35s ease;
+}
+
+.click-card * {
+    text-decoration: none !important;
 }
 
 @media (max-width: 1921px){
 
 }
+
